@@ -1,12 +1,12 @@
 import express from "express";
-import {getStories, getStoriesById, createStory, updateStory, deleteStory} from "../controllers/StoryController.js";
+import {getStories, getStoriesById, createStories, updateStories, deleteStories} from "../controllers/StoryController.js";
 
 const router = express.Router();
 
 router.get('/stories', getStories);
 router.get('/stories/:id', getStoriesById);
-router.post('/stories', createStory);
-router.patch('/stories/:id', updateStory);
-router.delete('/stories/:id', deleteStory);
+router.post('/stories', createStories);
+router.patch('/stories/:id', updateStories);
+router.delete('/stories/:id', deleteStories);
 
 export default router;

@@ -10,7 +10,9 @@ Content-Type: application/json
 {
     "title": "BUKU 1",
     "author": "Jhon",
+    "synopsis": "Pada Suatu Hari Jhon Beserta Adiknya.",
     "category": "Fiksi",
+    "cover": "img/..",
     "tags": "Biografi",
     "status": "Aktif"
 }
@@ -22,11 +24,56 @@ Content-Type: application/json
 {
     "title": "BUKU 1",
     "author": "Jhon",
+    "synopsis": "Pada Suatu Hari Jhon Beserta Kakaknya.",
     "category": "Fiksi",
+    "cover": "img/..",
     "tags": "Biologi",
     "status": "Aktif"
 }
 
 
 ###
-DELETE http://localhost:5000/stories/2
+DELETE http://localhost:5000/stories/3
+
+
+
+# Testing API Chapter
+###
+GET http://localhost:5000/stories/1/chapter
+
+###
+GET http://localhost:5000/stories/chapter/4
+
+###
+POST http://localhost:5000/stories/chapter
+Content-Type: application/json
+
+{
+    "titleChapter": "yyyyyyyyy",
+    "storyChapter": "Jhon duaeddddddddddddede",
+    "idStories": "1"
+}
+
+###
+PATCH http://localhost:5000/stories/chapter/1
+Content-Type: application/json
+
+{
+    "titleChapter": "yyyyyyyyy",
+    "storyChapter": "LBF aedaedadadawawdawdawdfw",
+    "idStories": "1"
+}
+
+
+###
+DELETE http://localhost:5000/stories/chapter/2
+
+
+###
+POST http://localhost:5000/stories/chapter
+Content-Type: application/json
+
+{
+    "titleChapter": "yyfefefefy",
+    "storyChapter": "Jhon duaeddddefeafafa"
+}
