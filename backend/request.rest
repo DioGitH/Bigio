@@ -1,0 +1,32 @@
+GET http://localhost:5000/stories
+
+###
+GET http://localhost:5000/stories/1
+
+###
+POST http://localhost:5000/stories
+Content-Type: application/json
+
+{
+    "title": "BUKU 1",
+    "author": "Jhon",
+    "category": "Fiksi",
+    "tags": "Biografi",
+    "status": "Aktif"
+}
+
+###
+PATCH http://localhost:5000/stories/1
+Content-Type: application/json
+
+{
+    "title": "BUKU 1",
+    "author": "Jhon",
+    "category": "Fiksi",
+    "tags": "Biologi",
+    "status": "Aktif"
+}
+
+
+###
+DELETE http://localhost:5000/stories/2
