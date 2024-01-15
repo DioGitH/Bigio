@@ -1,5 +1,8 @@
 import Story from "../models/StoryModel.js";
 import Chapter from "../models/ChapterModel.js";
+import { Sequelize } from "sequelize";
+
+const { Op } = Sequelize;
 
 export const getStories = async(req, res) =>{
     try{
@@ -20,6 +23,34 @@ export const getStoriesById = async (req, res) => {
         res.status(200).json(response);
     } catch (error) {
         console.log(error.message);
+    }
+}
+
+export const getStoriesByNameAuthor = async (req, res) => {
+    try {
+        const searchTerm = req.params.body;
+
+        const response = await Story.findAll({
+            where: {
+                [Op.or]: [
+                    {
+                        title: {
+                            [Op.like]: `%${searchTerm}%`
+                        }
+                    },
+                    {
+                        author: {
+                            [Op.like]: `%${searchTerm}%`
+                        }
+                    }
+                ]
+            }
+        });
+
+        res.status(200).json(response);
+    } catch (error) {
+        console.log(error.message);
+        res.status(500).json({ error: 'Internal Server Error' });
     }
 }
 
