@@ -4,6 +4,7 @@ import SideNav from './SideNav';
 import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
+import ModalCancel from './ModalCancel';
 
 const AddStoryPage = () => {
     return (
@@ -29,6 +30,7 @@ const [category, setCategory] = useState("Financial");
 const [cover, setCover] = useState("");
 const [tags, setTags] = useState("");
 const [status, setStatus] = useState("Publish");
+const [cancel, setCancel] = useState(false);
 const navigate = useNavigate();
 
 const saveStory = async(e) =>{
@@ -48,6 +50,17 @@ const saveStory = async(e) =>{
         console.log(error);
     }
 }
+
+const cancelStory = async() =>{
+    try {
+        await axios.delete('http://localhost:5000/chapter/null');
+        navigate("/story");
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
 
 const handleImageChange = (e) => {
     const selectedImage = e.target.files[0];
@@ -131,10 +144,19 @@ const handleImageChange = (e) => {
                 </div>
                 <br /><br />
                 <ChapterList />
-                <div className="field">
-                    <button type='submit' className='button is-success'>Save</button>
+                <div className="columns">
+                    <div className="column">
+                          <div className="field">
+                              <button type='submit' className='button is-success'>Save</button>
+                          </div>
+                    </div>
                 </div>
             </form>
+            <div className="column">
+                <div className="field">
+                    <ModalCancel onCancel={cancelStory}/>
+                </div>
+            </div>
         </div>
     </div>
   )

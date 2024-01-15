@@ -79,3 +79,24 @@ export const deleteChapter = async (req, res) => {
         console.log(error.message);
     }
 }
+
+export const deleteChapterByNull = async (req, res) => {
+    try {
+        const chapterDelete = await Chapter.findAll({
+            where: {
+                idStories: null
+            }
+        });
+
+        const chapterIds = chapterDelete.map((chapter) => chapter.id);
+
+        await Chapter.destroy({
+            where: {
+                id: chapterIds
+            }
+        });
+        res.status(200).json({ msg: "Chapter Deleted" });
+    } catch (error) {
+        console.log(error.message);
+    }
+}
