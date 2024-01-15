@@ -4,6 +4,7 @@ import SideNav from './SideNav';
 import { Link } from "react-router-dom";
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from "axios";
+import ModalCancel from './ModalCancel';
 
 const UpdateStoryPage = () => {
     return (
@@ -48,6 +49,15 @@ const UpdateStory = () => {
                 tags,
                 status
             });
+            navigate("/story");
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    const cancelStory = async () => {
+        try {
+            await axios.delete('http://localhost:5000/chapter/null');
             navigate("/story");
         } catch (error) {
             console.log(error);
@@ -152,6 +162,11 @@ const UpdateStory = () => {
                         <button type='submit' className='button is-success'>Update</button>
                     </div>
                 </form>
+                <div className="column">
+                    <div className="field">
+                        <ModalCancel onCancel={cancelStory} />
+                    </div>
+                </div>
             </div>
         </div>
     )
