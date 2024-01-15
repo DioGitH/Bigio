@@ -1,8 +1,20 @@
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import StoryPage from "./components/StoryPage";
+import AddStoryPage from "./components/AddStoryPage";
+import DashboardPage from "./components/DashboardPage";
+import AddChapterPage from "./components/AddChapterPage";
+
+
 function App() {
   return (
-    <div>
-      <h1>Lorem ipsum dolor sit amet.</h1>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<DashboardPage/>}></Route>
+      <Route path="/story" element={<StoryPage/>}></Route>
+      <Route path="/add" element={<AddStoryPage/>}></Route>
+      <Route path="/addChapter" element={<AddChapterPage/>}></Route>
+    </Routes>
+    </BrowserRouter>
   );
 }
 

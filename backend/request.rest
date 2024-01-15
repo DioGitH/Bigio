@@ -39,7 +39,7 @@ DELETE http://localhost:5000/stories/3
 
 # Testing API Chapter
 ###
-GET http://localhost:5000/stories/1/chapter
+GET http://localhost:5000/stories/5/chapter
 
 ###
 GET http://localhost:5000/stories/chapter/4
@@ -49,7 +49,7 @@ POST http://localhost:5000/stories/chapter
 Content-Type: application/json
 
 {
-    "titleChapter": "yyyyyyyyy",
+    "titleChapter": "yyyyywddededed",
     "storyChapter": "Jhon duaeddddddddddddede",
     "idStories": "1"
 }
@@ -77,3 +77,6 @@ Content-Type: application/json
     "titleChapter": "yyfefefefy",
     "storyChapter": "Jhon duaeddddefeafafa"
 }
+
+###
+GET http://localhost:5000/chapter/null

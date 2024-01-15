@@ -26,6 +26,19 @@ export const getChapterById = async (req, res) => {
     }
 }
 
+export const getChapterByNull = async (req, res) => {
+    try {
+        const response = await Chapter.findAll({
+            where: {
+                idStories: null
+            }
+        });
+        res.status(200).json(response);
+    } catch (error) {
+        console.log(error.message);
+    }
+}
+
 export const createChapter = async (req, res) => {
     try {
         await Chapter.create(req.body);
