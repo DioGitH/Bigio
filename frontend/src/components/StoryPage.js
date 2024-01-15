@@ -55,8 +55,8 @@ const getStories = async ()=>{
                             <td>{story.tags}</td>
                             <td>{story.status}</td>
                             <td>
-                                <button className='button is-small is-info'>Detail</button>
-                                <button className='button is-small is-danger'>Edit</button>
+                                <Link to={`/updateStories/${story.id}`} className='button is-small is-info'>Edit</Link>
+                                <button className='button is-small is-danger'>Detail</button>
                             </td>
                         </tr>
                     ))}

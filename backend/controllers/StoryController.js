@@ -44,6 +44,10 @@ export const updateStories = async (req, res) => {
                 id: req.params.id
             }
         });
+        await Chapter.update(
+            { idStories: req.params.id },
+            { where: { idStories: null } }
+        );
         res.status(200).json({msg: "Story Updated"});
     } catch (error) {
         console.log(error.message);

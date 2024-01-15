@@ -39,7 +39,7 @@ const UpdateChapter = () => {
                 titleChapter,
                 storyChapter
             });
-            navigate("/add");
+            navigate(-1);
         } catch (error) {
             console.log(error);
         }

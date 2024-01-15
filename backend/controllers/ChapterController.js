@@ -1,10 +1,16 @@
 import Chapter from "../models/ChapterModel.js";
+import { Sequelize } from "sequelize";
+
+const { Op } = Sequelize;
 
 export const getChapter = async (req, res) => {
     try {
         const response = await Chapter.findAll({
             where:{
-                idStories: req.params.id
+                [Op.or]:[
+                    {idStories: req.params.id},
+                    { idStories: null }
+                ]
             }
         });
         res.status(200).json(response);
