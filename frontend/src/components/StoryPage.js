@@ -52,8 +52,13 @@ const getStories = async ()=>{
     } catch (error) {
         console.log(error);
     }
-    
+
 }
+
+const handleResetFilter = () => {
+    setSearchResults([]);
+    setFilters({ category: '', status: '' });
+  };
 
   return (
     <div className="columns mt-5 is-centered">
@@ -76,8 +81,11 @@ const getStories = async ()=>{
                       </div>
                 </form>
                   <div className="column">
-                      <ModalFilter onApplyFilter={(selectedFilters) =>setFilters(selectedFilters)}/>
+                      <button className='button is-primary' onClick={handleResetFilter}>Reset</button>
                   </div>
+                <div className="column">
+                    <ModalFilter onApplyFilter={(selectedFilters) =>setFilters(selectedFilters)}/>
+                </div>
                 <div className="column">
                     <Link to="/add" className="button is-success">Add Story</Link>
                 </div>
