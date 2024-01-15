@@ -3,7 +3,7 @@ import { Button, Modal, Content } from 'react-bulma-components';
 
 const ModalFilter = ({onApplyFilter}) => {
     const [isModalOpen, setModalOpen] = useState(false);
-    const [category, setCategory] = useState('Fiksi');
+    const [category, setCategory] = useState('Financial');
     const [status, setStatus] = useState('Publish');
 
     const handleApplyFilter = () => {
@@ -34,8 +34,9 @@ const ModalFilter = ({onApplyFilter}) => {
                                             <div className="control">
                                                 <div className='select is-fullwidth'>
                                                     <select value={category} onChange={(e) => setCategory(e.target.value)}>
-                                                        <option value="Fiksi">Fiksi</option>
-                                                        <option value="NonFiksi">NonFiksi</option>
+                                                        <option value="Financial">Financial</option>
+                                                        <option value="Technology">Technology</option>
+                                                        <option value="Health">Health</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -49,7 +50,7 @@ const ModalFilter = ({onApplyFilter}) => {
                                             <div className='select is-fullwidth'>
                                                 <select value={status} onChange={(e) => setStatus(e.target.value)}>
                                                     <option value="Publish">Publish</option>
-                                                    <option value="Not Publish">Not Publish</option>
+                                                    <option value="Draft">Draft</option>
                                                 </select>
                                             </div>
                                         </div>

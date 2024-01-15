@@ -25,7 +25,7 @@ const UpdateStory = () => {
     const [title, setTitle] = useState("");
     const [author, setAuthor] = useState("");
     const [synopsis, setSynopsis] = useState("");
-    const [category, setCategory] = useState("Fiksi");
+    const [category, setCategory] = useState("Financial");
     const [cover, setCover] = useState("");
     const [tags, setTags] = useState("");
     const [status, setStatus] = useState("Publish");
@@ -103,8 +103,9 @@ const UpdateStory = () => {
                                 <div className="control">
                                     <div className='select is-fullwidth'>
                                         <select value={category} onChange={(e) => setCategory(e.target.value)}>
-                                            <option value="Fiksi">Fiksi</option>
-                                            <option value="NonFiksi">NonFiksi</option>
+                                            <option value="Financial">Financial</option>
+                                            <option value="Technology">Technology</option>
+                                            <option value="Health">Health</option>
                                         </select>
                                     </div>
                                 </div>
@@ -138,7 +139,7 @@ const UpdateStory = () => {
                                     <div className='select is-fullwidth'>
                                         <select value={status} onChange={(e) => setStatus(e.target.value)}>
                                             <option value="Publish">Publish</option>
-                                            <option value="Not Publish">Not Publish</option>
+                                            <option value="Draft">Draft</option>
                                         </select>
                                     </div>
                                 </div>
@@ -180,7 +181,7 @@ const ChapterList = () => {
     return (
         <div className="columns mt-10 is-centered">
             <div className="column">
-                <Link to="/addChapter" className="button is-success">Add Chapter</Link>
+                <Link to="/addChapter" className="button is-success is-pulled-right">Add Chapter</Link>
                 <table className='table is-striped is-fullwidth'>
                     <thead>
                         <tr>
