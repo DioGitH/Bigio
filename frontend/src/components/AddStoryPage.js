@@ -130,6 +130,15 @@ const getChapter = async ()=>{
     const response = await axios.get('http://localhost:5000/chapter/null');
     setChapter(response.data);
 }
+
+const deleteChapter = async(id)=>{
+    try{
+        await axios.delete(`http://localhost:5000/stories/chapter/${id}`);
+        getChapter();
+    } catch (error){
+        console.log(error);
+    }
+}
     return(
         <div className="columns mt-10 is-centered">
             <div className="column">
@@ -149,8 +158,8 @@ const getChapter = async ()=>{
                                 <td>{chapter.titleChapter}</td>
                                 <td>{chapter.updatedAt}</td>
                                 <td>
-                                    <button className='button is-small is-info'>Update</button>
-                                    <button className='button is-small is-danger'>Edit</button>
+                                    <button className='button is-small is-info'><Link to={`/updateChapter/${chapter.id}`}>Update</Link></button>
+                                    <button onClick={() => deleteChapter(chapter.id)} className='button is-small is-danger'>Delete</button>
                                 </td>
                             </tr>
                         ))}

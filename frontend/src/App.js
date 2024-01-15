@@ -3,6 +3,7 @@ import StoryPage from "./components/StoryPage";
 import AddStoryPage from "./components/AddStoryPage";
 import DashboardPage from "./components/DashboardPage";
 import AddChapterPage from "./components/AddChapterPage";
+import UpdateChapterPage from "./components/UpdateChapterPage";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Route path="/story" element={<StoryPage/>}></Route>
       <Route path="/add" element={<AddStoryPage/>}></Route>
       <Route path="/addChapter" element={<AddChapterPage/>}></Route>
+      <Route path="/updateChapter/:id" element={<UpdateChapterPage/>}></Route>
     </Routes>
     </BrowserRouter>
   );
