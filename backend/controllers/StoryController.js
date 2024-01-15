@@ -54,6 +54,29 @@ export const getStoriesByNameAuthor = async (req, res) => {
     }
 }
 
+export const getStoriesByCatStat = async (req, res) => {
+    try {
+        const searchTerm1 = req.params.search1;
+        const searchTerm2 = req.params.search2;
+
+        const response = await Story.findAll({
+            where: {
+                category: {
+                    [Op.eq]: searchTerm1
+                },
+                status: {
+                    [Op.eq]: searchTerm2
+                }
+            }
+        });
+
+        res.status(200).json(response);
+    } catch (error) {
+        console.log(error.message);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+}
+
 export const createStories = async (req, res) => {
     try {
         const newStory = await Story.create(req.body);
