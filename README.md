@@ -118,13 +118,13 @@ Bigio/
 
     - The filter function using modal popup works. Users can select filters based on categories and status. A reset button was added outside the modal to reset all filters.
 
-    <img src="docs/img/FilterModal.png" alt="Alt text" title="Optional title" style="max-width: 500px">
+    <img src="docs/img/FilterModal.png" alt="Alt text" title="Optional title" style="max-width: 250px">
 
 - **Display a list of stories on the table** ![Finished](https://custom-icon-badges.demolab.com/badge/finished-green.svg?logo=check-circle-fill&logoColor=white)
 
     - Features Displays a list of story works. Users can see the story title, author, category, tags/keywords, and status on the story page.
 
-<img src="docs/img/StoryList.png" alt="Alt text" title="Optional title" style="max-width: 600px">
+<img src="docs/img/StoryList.png" alt="Alt text" title="Optional title" style="max-width: 350px">
 
 ### Add Story
 - **Input general information**
@@ -164,14 +164,14 @@ Bigio/
 
         If the button is clicked a notification modal will appear. If the user clicks the No button, then the modal will close and if the user clicks the Yes button, the page will return to the Story List page and delete all the chapters that have been added on the Add Story page if any.
 
-        <img src="docs/img/CancelModal.png" alt="Alt text" title="Optional title" style="max-width: 400px">
+        <img src="docs/img/CancelModal.png" alt="Alt text" title="Optional title" style="max-width: 250px">
 
     - **Save Button** ![Finished](https://custom-icon-badges.demolab.com/badge/finished-green.svg?logo=check-circle-fill&logoColor=white)
 
         If clicked, it will return to the Story List page and saving all general information and the newly added Chapter List data.
 
-<img src="docs/img/AddStory.png" alt="Alt text" title="Optional title" style="max-width: 600px">
-<img src="docs/img/AddChapter.png" alt="Alt text" title="Optional title" style="max-width: 600px">
+<img src="docs/img/AddStory.png" alt="Alt text" title="Optional title" style="max-width: 350px">
+<img src="docs/img/AddChapter.png" alt="Alt text" title="Optional title" style="max-width: 350px">
 
 ### Story Detail ![Finished](https://custom-icon-badges.demolab.com/badge/finished-green.svg?logo=check-circle-fill&logoColor=white)
 - Display detailed information about a selected story, including its chapters, author, and other relevant details on view-only mode.
