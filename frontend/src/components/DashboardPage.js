@@ -11,7 +11,11 @@ class DashboardPage extends Component {
                     <div className="columns">
                         <SideNav />
                         <main className="column">
-                            Dashboard
+                            <div className="has-text-centered">
+                                <a className='is-size-1 has-text-weight-semibold has-text-black'>
+                                    Dashboard
+                                </a>
+                            </div>
                         </main>
                     </div>
                 </div>

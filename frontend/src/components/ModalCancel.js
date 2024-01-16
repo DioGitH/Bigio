@@ -28,8 +28,8 @@ const ModalCancel = ({ onCancel }) => {
                         </Content>
                     </Modal.Card.Body>
                     <Modal.Card.Footer>
-                        <Button className="m-4" onClick={handleCancel}>Yes</Button>
-                        <Button className="m-4" onClick={() => setModalOpen(false)}>No</Button>
+                        <Button className="button is-info m-4" onClick={() => setModalOpen(false)}>No</Button>
+                        <Button className="button is-danger m-4" onClick={handleCancel}>Yes</Button>
                     </Modal.Card.Footer>
                 </Modal.Card>
             </Modal>

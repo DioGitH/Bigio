@@ -159,7 +159,7 @@ const UpdateStory = () => {
                     <br /><br />
                     <ChapterList />
                     <div className="field">
-                        <button type='submit' className='button is-success'>Update</button>
+                        <button type='submit' className='button is-success ml-3'>Update</button>
                     </div>
                 </form>
                 <div className="column">
@@ -212,8 +212,8 @@ const ChapterList = () => {
                                 <td>{chapter.titleChapter}</td>
                                 <td>{chapter.updatedAt}</td>
                                 <td>
-                                    <Link to={`/updateChapter/${chapter.id}`} className='button is-small is-info'>Update</Link>
-                                    <Link onClick={() => deleteChapter(chapter.id)} className='button is-small is-danger'>Delete</Link>
+                                    <Link to={`/updateChapter/${chapter.id}`} className='button is-small is-info mr-1'>Update</Link>
+                                    <Link onClick={() => deleteChapter(chapter.id)} className='button is-small is-danger ml-1'>Delete</Link>
                                 </td>
                             </tr>
                         ))}

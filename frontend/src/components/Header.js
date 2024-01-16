@@ -4,13 +4,13 @@ import React, { Component } from 'react';
 class Header extends Component {
     render() {
         return (
-            <header className="header hero is-light">
-                <div className="hero-head">
-                    <nav className="navbar has-shadow" role="navigation" aria-label="main navigation">
-                        <div className="navbar-brand">
-                            <h1>StoryKu</h1>
-                        </div>
-                    </nav>
+            <header className="header hero has-background-info pb-3 pl-3">
+                <div class="navbar-brand">
+                    <div className="has-text-centered">
+                        <a className='is-size-1 has-text-weight-semibold has-text-white'>
+                            StoryKu
+                        </a>
+                    </div>
                 </div>
             </header>
         );

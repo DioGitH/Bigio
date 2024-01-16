@@ -56,13 +56,11 @@ const ModalFilter = ({onApplyFilter}) => {
                                         </div>
                                     </div>
                                 </div>
-                                <button className='button is-primary' onClick={handleApplyFilter}>Cari</button>
+                                <button className='button is-primary mr-3 mt-6' onClick={handleApplyFilter}>Filter</button>
+                                <Button className="mt-6" onClick={() => setModalOpen(false)}>Cancel</Button>
                             </form>
                         </Content>
                     </Modal.Card.Body>
-                    <Modal.Card.Footer>
-                        <Button onClick={() => setModalOpen(false)}>Cancel</Button>
-                    </Modal.Card.Footer>
                 </Modal.Card>
             </Modal>
         </div>

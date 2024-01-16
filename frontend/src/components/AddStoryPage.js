@@ -147,7 +147,7 @@ const handleImageChange = (e) => {
                 <div className="columns">
                     <div className="column">
                           <div className="field">
-                              <button type='submit' className='button is-success'>Save</button>
+                              <button type='submit' className='button is-success ml-3'>Save</button>
                           </div>
                     </div>
                 </div>
@@ -201,8 +201,8 @@ const deleteChapter = async(id)=>{
                                 <td>{chapter.titleChapter}</td>
                                 <td>{chapter.updatedAt}</td>
                                 <td>
-                                    <Link to={`/updateChapter/${chapter.id}`}  className='button is-small is-info'>Update</Link>
-                                    <Link onClick={() => deleteChapter(chapter.id)} className='button is-small is-danger'>Delete</Link>
+                                    <Link to={`/updateChapter/${chapter.id}`}  className='button is-small is-info mr-1'>Update</Link>
+                                    <Link onClick={() => deleteChapter(chapter.id)} className='button is-small is-danger ml-1'>Delete</Link>
                                 </td>
                             </tr>
                         ))}

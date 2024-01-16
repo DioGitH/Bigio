@@ -125,8 +125,8 @@ const handleResetFilter = () => {
                                   <td>{story.tags}</td>
                                   <td>{story.status}</td>
                                   <td>
-                                      <Link to={`/updateStories/${story.id}`} className='button is-small is-info'>Edit</Link>
-                                      <Link to={`/detailStories/${story.id}`} className='button is-small is-danger'>Detail</Link>
+                                      <Link to={`/updateStories/${story.id}`} className='button is-small is-info mr-1'>Edit</Link>
+                                      <Link to={`/detailStories/${story.id}`} className='button is-small is-danger ml-1'>Detail</Link>
                                   </td>
                               </tr>
                           ))

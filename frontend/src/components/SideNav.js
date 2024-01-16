@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 class SideNav extends Component {
     render() {
         return (
-            <aside className=" SideNav column is-2">
+            <aside className="SideNav column is-2" style={{ borderRight: "2px solid #ccc" }}>
                 <nav className="menu">
                     <p className="menu-label">
                         General
