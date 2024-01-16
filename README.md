@@ -16,6 +16,7 @@ The technology stack chosen for this project reflects a focus on modern, efficie
 - [Libraries](#libraries)
 - [Project Structure](#project-structure)
 - [Website URL](#website-url)
+- [Contact](#contact)
 ## Authors
 
 - [@DioGitH](https://www.github.com/DioGitH)
