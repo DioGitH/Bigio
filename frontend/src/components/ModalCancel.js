@@ -18,7 +18,7 @@ const ModalCancel = ({ onCancel }) => {
             <Modal show={isModalOpen} onClose={() => setModalOpen(false)}>
                 <Modal.Card>
                     <Modal.Card.Header>
-                        <Modal.Card.Title>Filter</Modal.Card.Title>
+                        <Modal.Card.Title>Alert</Modal.Card.Title>
                     </Modal.Card.Header>
                     <Modal.Card.Body>
                         <Content>

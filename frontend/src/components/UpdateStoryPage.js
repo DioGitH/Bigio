@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from "axios";
 import ModalCancel from './ModalCancel';
+import { format } from 'date-fns';
+
 
 const UpdateStoryPage = () => {
     return (
@@ -210,7 +212,7 @@ const ChapterList = () => {
 
                             <tr>
                                 <td>{chapter.titleChapter}</td>
-                                <td>{chapter.updatedAt}</td>
+                                <td>{format(new Date(chapter.updatedAt), 'dd MMMM yyyy')}</td>
                                 <td>
                                     <Link to={`/updateChapter/${chapter.id}`} className='button is-small is-info mr-1'>Update</Link>
                                     <Link onClick={() => deleteChapter(chapter.id)} className='button is-small is-danger ml-1'>Delete</Link>

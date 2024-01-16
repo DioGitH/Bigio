@@ -4,6 +4,8 @@ import SideNav from './SideNav';
 import { Link } from "react-router-dom";
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from "axios";
+import { format } from 'date-fns';
+
 
 const DetailStoryPage = () => {
     return (
@@ -178,7 +180,7 @@ const ChapterList = () => {
 
                             <tr>
                                 <td>{chapter.titleChapter}</td>
-                                <td>{chapter.updatedAt}</td>
+                                <td>{format(new Date(chapter.updatedAt), 'dd MMMM yyyy')}</td>
                                 <td>
                                     <Link to={`/detailChapter/${chapter.id}`} className='button is-small is-info'>Detail</Link>
                                 </td>
