@@ -179,10 +179,11 @@ Bigio/
 ### Edit Story ![Finished](https://custom-icon-badges.demolab.com/badge/finished-green.svg?logo=check-circle-fill&logoColor=white)
 - Enable users to edit the information of an existing story, such as updating the title, author, or other data with all field autofilled with data to be edited. 
 
-## Website URL
-Youtube link project 
+## Youtube URL
 
-[![Youtube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://)
+[![Youtube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/_8Y1Ij4MiMA)
+
+or link here https://youtu.be/_8Y1Ij4MiMA
 
 ## Contact
 If you want to contact me you can reach me at maulidiobisnis16@gmail.com
