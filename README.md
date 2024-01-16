@@ -16,7 +16,7 @@ The technology stack chosen for this project reflects a focus on modern, efficie
 - [Libraries](#libraries)
 - [Project Structure](#project-structure)
 - [List Of Challenge Requirements](#list-of-challenge-requirements)
-- [Website URL](#youtube-url)
+- [Youtube URL](#youtube-url)
 - [Contact](#contact)
 ## Authors
 
